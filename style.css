@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score .label {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.score span:last-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.game-area {
+    margin-bottom: 20px;
+}
+
+#gameCanvas {
+    border: 3px solid #00ff88;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    cursor: none;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls p {
+    margin-bottom: 15px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+#resetBtn {
+    background: linear-gradient(45deg, #00ff88, #00cc66);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
+#resetBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+}
+
+#resetBtn:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 850px) {
+    #gameCanvas {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .game-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .scoreboard {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .score span:last-child {
+        font-size: 2rem;
+    }
+}
